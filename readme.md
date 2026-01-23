@@ -223,7 +223,8 @@ If you need samples from the RGB frames for comparison, run
 
 ```python save_png.py```
 
-This script preprocess the RGB frames in the same pipeline. In this set of samples, in the name of each sample, the number after word "label" is the label, and the number after workd "timestamp" is the timestamp. To save time, you can download the preprocessed RGB samples (```rgb.zip```) from [HERE](https://drive.google.com/drive/folders/1N3tMr3MM-Fo_GN2T5B4C52VfnCZsQSbC?usp=sharing).
+This script preprocess the RGB frames in the same pipeline. 
+In this set of samples, in the filename of each sample, the number after word "label" is the label, and the number after workd "timestamp" is the timestamp. 
 
 
 ## 2. Model Training
