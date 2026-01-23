@@ -345,7 +345,7 @@ Remember to modify the path to the dataset through ```dataset_path_test =``` in 
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
 -->
 
-Comparison with NetVLAD:
+Comparison with NetVLAD: see [Here](https://github.com/niart/SNN_NetVlad)
 
 ## 4. Localization of robot through image retrieval
 1) ```cd fzj_vpr/utils```, and ```python localize.py```. This step will generate four dictionaries seq_reference{}.pkl and seq_query{}.pkl, where {} will be the number of samples in either reference dataset (used for training) or query dataset (used for inference).  Mannually delete two of the four which contain unmatched number (for example, if you have 1000 samples in training dataset, you will keep seq_reference1000.pkl and delete the other seq_reference{}.pkl).
