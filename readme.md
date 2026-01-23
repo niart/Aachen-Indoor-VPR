@@ -172,7 +172,7 @@ git clone https://github.com/niart/Aachen-Indoor-VPR.git
 cd Aachen-Indoor-VPR/preprocess
 ```
 
-A) Mannually divide the arena into 4*4 sections:
+### A) Mannually divide the arena into 4*4 sections:
 
 Firstly, 
 ```python 
@@ -196,7 +196,7 @@ At the same time, in the termnial, the representing color for each class will be
 </p>
 This color list will be used for TSNE project in ```fzj_vpr/utils/train_hybrid_vae_guided_base.py```.
 
-B) Align event camera with motion capture system: ```python align.py```.
+### B) Align event camera with motion capture system: ```python align.py```.
 This command will generate a **`number of event per sample - sample index'** graph, something similar to:
 
 <p align="center">
