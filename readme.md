@@ -238,23 +238,23 @@ The training algorithm is in ```fzj_vpr/utils/hybrid_vae_guided_base.py```.
 
 ### Run the experiment: 
 
-#### 1. Setup environment: 
+#### a. Setup environment: 
 Use Anaconda to create and activate a virtual environment ```fzj_vpr``` with 
 ```python 
 conda env create -f env.yml 
 conda activate fzj_vpr
 ```
 
-#### 2. To test the trained model:
+#### 2. To test our trained model:
 Firstly, download the trained model ```epoch00390.tar``` from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing) and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
 Then, 
 ```python 
-cd fzj_vpr/utils
+cd Aachen-Indoor-VPR/utils
 python train_hybrid_vae_guided_base.py
 ```
-The testing dataset path is indicated in ```fzj_vpr/```
+The path for loading testing dataset in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/utils/train_hybrid_vae_guided_base.py#L1072)
 
-Have a look at Tensorboard by running: ```tensorbord --logdir= --port=```, where you will see 
+Have a look at Tensorboard by running: ```tensorbord --logdir= --port=```, where you will see the excitatory classifier accuracy and TSNE plots. 
 
 #### 3. To train the model yourself:
 ```python 
