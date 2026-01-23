@@ -327,18 +327,15 @@ This evaluation is to investigate if this model is able to distinguish new place
 Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. 
 In our project, we mix the samplesets of three new places (printing room, passageway and hall) into the testing sampleset, and used the three unvisited location classes to label three new places, so that we can take advantage of the testing algorithm. 
 
-Then, 
-```python 
-cd fzj_vpr/utils
-python evaluation_zero_shot.py
-```
+<!--
 Remember to modify the path to the dataset through ```dataset_path_test =``` in ```evaluation_zero_shot.py```
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
+-->
 
 ### B) Completely new places
-This evaluation is to investigate if this model is able to distinguish several new places when it's surrounded by a complately new environment, without any continued pre-training. 
-Firstly, merge the four new additonal dataset mentioned in the last section into one. Alternatively, download the preprocessed samples ```generalization_samples.zip```(containing four new places) from [HERE](https://drive.google.com/drive/folders/17qiy4RDu7-7BOo3-SE6ze-fjyQQlz-9o?usp=sharing). 
-Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
+We merged the samplesets of three new places (printing room, passageway and hall) into one and then took advantage of the testing algorithm. 
+
+<!--
 Then, 
 ```python 
 cd fzj_vpr/utils
@@ -346,6 +343,7 @@ python evaluation_generalization.py
 ```
 Remember to modify the path to the dataset through ```dataset_path_test =``` in ```evaluation_generalization.py```
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
+-->
 
 Comparison with NetVLAD:
 
