@@ -17,9 +17,6 @@ Two ‘DAVIS 346’ event cameras were mounted at the front of the robot. The le
   </tr>
 </table>
 
-A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
-Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
-Four were under normal lighting, and one (Trip2) in dim conditions. 
 
 The environment is a 6m×4m artificial office-like space with four walls and various objects like tables, books,
 and bins in the laboratory of Juliech Research Center, Aachen Germany (see below). 
@@ -29,6 +26,10 @@ and bins in the laboratory of Juliech Research Center, Aachen Germany (see below
 <img src="https://github.com/niart/fzj_vpr/blob/9ac69682f54a8b9eb82b3acfaac5cda7f956921d/pic/20231024_175836.jpg" width=24% height=50%>
 <img src="https://github.com/niart/fzj_vpr/blob/9ac69682f54a8b9eb82b3acfaac5cda7f956921d/pic/20231024_175849.jpg" width=24% height=50%>
 </p>
+
+A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
+Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
+Four were under normal lighting, and one (Trip2) in dim conditions. 
 
 The entire arena is evenly divided into 4 × 4 = 16 labeled square cells as shown below:
 
