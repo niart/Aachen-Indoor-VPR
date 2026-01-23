@@ -227,8 +227,8 @@ This script preprocess the RGB frames in the same pipeline.
 In this set of samples, in the filename of each sample, the number after word "label" is the label, and the number after workd "timestamp" is the timestamp. 
 
 
-## 2. Model Training
-### A quick look at key files:
+## 2. Run the experiment: 
+### A) A quick overview at key files:
 1) key settings: The parameters for training are in ```/fzj_vpr/train/train_params.yml```;
 The parameters for testing are in ```/fzj_vpr/utils/test_params.yml```
 
@@ -236,16 +236,14 @@ The parameters for testing are in ```/fzj_vpr/utils/test_params.yml```
 The architecture of hybrid VAE is in ```fzj_vpr/utils/hybrid_beta_vae.py```;
 The training algorithm is in ```fzj_vpr/utils/hybrid_vae_guided_base.py```.
 
-### Run the experiment: 
-
-#### a. Setup environment: 
+### B) Setup environment: 
 Use Anaconda to create and activate a virtual environment ```fzj_vpr``` with 
 ```python 
 conda env create -f env.yml 
 conda activate fzj_vpr
 ```
 
-#### 2. To test our trained model:
+### C) To test our trained model:
 Firstly, download the trained model ```epoch00390.tar``` from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing) and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
 Then, 
 ```python 
@@ -256,7 +254,7 @@ The path for loading testing dataset in [this line](https://github.com/niart/Aac
 
 Have a look at Tensorboard by running: ```tensorbord --logdir= --port=```, where you will see the excitatory classifier accuracy and TSNE plots. 
 
-#### 3. To train the model yourself:
+### D) To train the model yourself:
 ```python 
 cd train
 python train.py
@@ -265,9 +263,10 @@ This step will result in a series of trained models (every 10 epochs) `number_of
 
 ```Aachen-Indoor-VPR/train/logs/train_hybrid_vae_guided_base/default/```.
 
-The path for loading training sampleset is [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L42)); 
+The path for loading training sampleset is [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L42); 
 and the path for loading evaluation sampleset (along with training) is in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L43).
 
+<!--
 #### 4. To train/test on 4-channel event frames, you need these modifications:
 1) In ```/fzj_vpr/utils/hybrid_beta_vae.py```, change 
 ```python
@@ -321,8 +320,9 @@ to
 ```python
 groups = 4
 ```
+-->
 
-### Evaluation for zero-shot classification
+## 3. Evaluation for cross-scene generalization
 This evaluation is to investigate if this model is able to distinguish a new place from familiar places without any continued pre-training. 
 Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. Then add the new dataset into the training dataset. Alternatively, download the preprocessed sample (testing dataset plus one of four new places) from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing). 
 Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
