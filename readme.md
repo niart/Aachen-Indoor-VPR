@@ -178,7 +178,7 @@ Firstly,
 ```python 
 python get_turtle.py
 ```
-This step is to take (X, Y) coordinates of the turtlebot from the motion capture records of multiple objects, resulting in tutle_trip_x.csv. 
+This step is to take (X, Y) coordinates of the turtlebot from the motion capture records of multiple objects, resulting in tutle_x.csv. 
 Use ```interpolation.py``` to fill in empty entries if there're empty entries in tutle_trip_x.csv.
 We also need a file all_turtle.csv which contains all entries of turtlebot coordinates from different trips. You can do so by manually merging all tutle_trip_x.csv, or slightly modify ```get_turtle.py```.
 
