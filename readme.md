@@ -364,28 +364,38 @@ Below is the T-SNE of hybrid guided VAE trained in varying illumination is teste
 Compare generalization with NetVLAD: see [Here](https://github.com/niart/SNN_NetVlad)
 
 ## 4. Localization of robot through image retrieval
-1) ```cd fzj_vpr/utils```, and ```python localize.py```.
+### a) Create query and reference sets
+   ```cd fzj_vpr/utils```, and ```python localize.py```.
    This step will generate four dictionaries seq_reference{}.pkl and seq_query{}.pkl, where {} will be the number of samples in either reference dataset (used for training) or query dataset (used for inference).  Mannually delete two of the four which contain unmatched number (for example, if you have 1000 samples in training dataset, you will keep seq_reference1000.pkl and delete the other seq_reference{}.pkl).
 Alternatively, download the preprocessed dictionaries from [HERE](https://drive.google.com/drive/folders/1BpLt6OM6WEpOh230yqi85enrvKnR8Pe9?usp=sharing).
 Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
 The path in ```localize.py/dataset_path =``` should direct to the dataset used for training, and the path in ```localize.py/dataset_path_test =``` should direct to the dataset intended for localization.
 
-3) 
+### b) Find the most similar reference frame for each query frame 
 ```python 
 cd ..
 cd fzj_vpr/localization
 python similarity.py
 ```
-This step will generate a file `5_Seq_similarity_results.csv` which contains a table with entries: `Highest Cosine Similarity`, `Distance`, `Query Coordinate`, `Reference Coordinate`;
-At the same time, this step will also output a `error - index of sample` graph.
-
+This step will generate a file `5_Seq_similarity_results.csv` which contains a table with entries: `Highest Cosine Similarity`, `Distance`, `Query Coordinate`, `Reference Coordinate`.
+The principle of retrieval through a sequence of 5 frames is illustrated as below:
 <p align="center">
 <img src="https://github.com/niart/Aachen-Indoor-VPR/blob/6b0a67e8ffd25e43d85ee2ab8648ea24dee4c547/pic/sequence.png" width=60% height=20%>
 </p>
+<!--
+At the same time, this step will also output a `error - index of sample` graph.
+-->
 
-3) ```python historgram.py```, this step will read file `5_Seq_similarity_results.csv` and generate a histogram of error distribution;
+### c) Check the error 
+```python historgram.py```, 
+this step will read file `5_Seq_similarity_results.csv` and generate a histogram of error distribution.
+We eventually generated a comprehensive historgram for our four different settings of this hybrid VAE:
 
-4)  ```python historgram.py```, this step will compute how the percentage of results that are within a certain tolerance (e.g., 0.5 meters). 
+<p align="center">
+<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/c3b3e9a13a9cbf50849ffcdfcebdcf7e298a21c4/pic/small_4_histogram.png" width=70% height=20%>
+</p>
+
+```python historgram.py```, this step will compute how the percentage of results that are within a certain tolerance (e.g., 0.5 meters). 
 
 
 <!--
