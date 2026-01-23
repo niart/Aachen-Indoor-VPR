@@ -4,7 +4,7 @@ Based on this new dataset, we implement and improve a hybrid guided VAE on the n
 Finally, we assess the capability of cross-scene generalization and analyse into the latent variable activity of this model.
 
 ## 1. *Aachen-Indoor-VPR*: an event/RGB VPR dataset in office-like arena
-The dataset is recorded with Turtlebot4 maneuvering within an artificial office-like arena, which encompasses two FOVs and two levels of illumination, along with an additional dataset of robot maneuvers recorded in four new places. A glance at **[dataset recording](https://www.youtube.com/watch?v=3YV6RFQt1Os)**. 
+The dataset is recorded with Turtlebot4 maneuvering within an artificial office-like arena, which encompasses two FOVs and two levels of illumination, along with an additional dataset of robot maneuvers recorded in four new places. A glance at **[dataset recording](https://www.youtube.com/watch?v=3YV6RFQt1Os)** here. 
 Two ‘DAVIS 346’ event cameras were mounted at the front of the robot. The left camera has a 12mm focal length, and the right has 2.5mm. See images below for our robot platform and event cameras:
 <table align="center" width="100%">
   <tr>
