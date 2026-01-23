@@ -387,10 +387,12 @@ At the same time, this step will also output a `error - index of sample` graph.
 
 4)  ```python historgram.py```, this step will compute how the percentage of results that are within a certain tolerance (e.g., 0.5 meters). 
 
+
+<!--
 ## 5. Compare the excitatory classifier with a SNN on RGB data from the same view.
 This evaluation is to investigate the performance of place classification in comparison to that from [^3].
 the rest is coming ...
-
+-->
 
 [^1]: This project is built on the top of repository **[Hybrid Guided VAE](https://github.com/kennetms/Accenture_Hybrid_Guided_VAE)**. 
 
