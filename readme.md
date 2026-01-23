@@ -176,6 +176,7 @@ cd Aachen-Indoor-VPR/preprocess
 ```bash
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
 cd Aachen-Indoor-VPR/preprocess
+```
 
 A) Mannually divide the arena into 4*4 sections:
 
