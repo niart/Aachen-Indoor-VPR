@@ -323,8 +323,11 @@ groups = 4
 -->
 
 ## 3. Evaluation for cross-scene generalization
-This evaluation is to investigate if this model is able to distinguish a new place from familiar places without any continued pre-training. 
-Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. Then add the new dataset into the training dataset. Alternatively, download the preprocessed sample (testing dataset plus one of four new places) from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing). 
+This evaluation is to investigate if this model is able to distinguish new place(s) from familiar places without any continued pre-training. 
+
+### A) Three novel places among 13 familiar places
+Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. We used the three unvisited location classes to label 
+Then add the new dataset into the training dataset. Alternatively, download the preprocessed sample (testing dataset plus one of four new places) from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing). 
 Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
 Then, 
 ```python 
@@ -334,7 +337,7 @@ python evaluation_zero_shot.py
 Remember to modify the path to the dataset through ```dataset_path_test =``` in ```evaluation_zero_shot.py```
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
 
-### Evaluation for generalization
+### B) Completely new places
 This evaluation is to investigate if this model is able to distinguish several new places when it's surrounded by a complately new environment, without any continued pre-training. 
 Firstly, merge the four new additonal dataset mentioned in the last section into one. Alternatively, download the preprocessed samples ```generalization_samples.zip```(containing four new places) from [HERE](https://drive.google.com/drive/folders/17qiy4RDu7-7BOo3-SE6ze-fjyQQlz-9o?usp=sharing). 
 Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
@@ -346,7 +349,9 @@ python evaluation_generalization.py
 Remember to modify the path to the dataset through ```dataset_path_test =``` in ```evaluation_generalization.py```
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
 
-### Localization of robot solely based on event camera input
+Comparison with NetVLAD:
+
+## 4. Localization of robot through image retrieval
 1) ```cd fzj_vpr/utils```, and ```python localize.py```. This step will generate four dictionaries seq_reference{}.pkl and seq_query{}.pkl, where {} will be the number of samples in either reference dataset (used for training) or query dataset (used for inference).  Mannually delete two of the four which contain unmatched number (for example, if you have 1000 samples in training dataset, you will keep seq_reference1000.pkl and delete the other seq_reference{}.pkl).
 Alternatively, download the preprocessed dictionaries from [HERE](https://drive.google.com/drive/folders/1BpLt6OM6WEpOh230yqi85enrvKnR8Pe9?usp=sharing).
 Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
@@ -365,7 +370,7 @@ At the same time, this step will also output a `error - index of sample` graph.
 
 4)  ```python historgram.py```, this step will compute how the percentage of results that are within a certain tolerance (e.g., 0.5 meters). 
 
-### Compare this model a SNN on RGB data from the same view.
+## 5. Compare the excitatory classifier with a SNN on RGB data from the same view.
 This evaluation is to investigate the performance of place classification in comparison to that from [^3].
 the rest is coming ...
 
