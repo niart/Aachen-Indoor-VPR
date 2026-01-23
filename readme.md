@@ -333,7 +333,7 @@ This evaluation is to investigate if this model is able to distinguish new place
 Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. 
 In our project, we mix the samplesets of three new places (printing room, passageway and hall) into the testing sampleset, and used the three unvisited location classes to label three new places, so that we can take advantage of the testing algorithm. 
 
-Below is the T-SNE of hybrid guided VAE trained in varying illumination is tested wit three new places mixed in learnt places. 
+Below is the T-SNE of hybrid guided VAE trained in varying illumination is tested with three new places mixed in learnt places. 
 <p align="center">
 <img src="https://github.com/niart/Aachen-Indoor-VPR/blob/470323ad69f8fe7934027bdc7b536b2fa57b66f3/pic/3new_updated.png" width=50% height=20%>
 </p>
@@ -355,6 +355,11 @@ python evaluation_generalization.py
 Remember to modify the path to the dataset through ```dataset_path_test =``` in ```evaluation_generalization.py```
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
 -->
+
+Below is the T-SNE of hybrid guided VAE trained in varying illumination is tested with a completely new dataset consisting of three new places. 
+<p align="center">
+<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/6b49107b2656bd1cb46ba89867757b91eec76ddc/pic/dark_117_0.png" width=50% height=20%>
+</p>
 
 Compare generalization with NetVLAD: see [Here](https://github.com/niart/SNN_NetVlad)
 
