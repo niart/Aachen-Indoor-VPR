@@ -392,10 +392,10 @@ this step will read file `5_Seq_similarity_results.csv` and generate a histogram
 We eventually generated a comprehensive historgram for our four different settings of this hybrid VAE:
 
 <p align="center">
-<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/c3b3e9a13a9cbf50849ffcdfcebdcf7e298a21c4/pic/small_4_histogram.png" width=70% height=20%>
+<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/c3b3e9a13a9cbf50849ffcdfcebdcf7e298a21c4/pic/small_4_histogram.png" width=60% height=20%>
 </p>
 
-```python historgram.py```, this step will compute how the percentage of results that are within a certain tolerance (e.g., 0.5 meters). 
+```python count.py```, this step will compute how the percentage of results that are within a certain tolerance (e.g., 0.5 meters). 
 
 
 <!--
