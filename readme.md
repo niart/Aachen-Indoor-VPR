@@ -176,7 +176,7 @@ The training algorithm is in ```fzj_vpr/utils/hybrid_vae_guided_base.py```.
 First and foremost, 
 ```python 
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
-cd fzj_vpr/preprocess
+cd Aachen-Indoor-VPR/preprocess
 ``` 
 You can skip the rest of this step if you download preprocessed datasets (titled `wide/narrow_tripx.zip`) from [HERE](https://drive.google.com/drive/folders/1Tz2tVOaChiXmHDxMNNozGww2RLLo5FZ2?usp=sharing). Otherwise, if you start from a xxx.aedat4 file:
 
