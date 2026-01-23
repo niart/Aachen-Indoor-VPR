@@ -32,7 +32,9 @@ The entire arena is evenly divided into 4 × 4 = 16 labeled square cells as show
 <img src="https://github.com/niart/fzj_vpr/blob/f06111dd2031cc5a6c824cadd6378180d8bc0888/pic/arena_horizental.png" width=60% height=50%>
 </p>
 
-Image samples recorded in each cell are classified into a unique class denoted by a letter 'A' to 'Q'. An example RGB image of each class from the first recording "Trip0" is displayed in the table below. Only 12 classes are displayed here because the robot finished this trip without entering the rest four cells.  
+Image samples recorded in each cell are classified into a unique class denoted by a letter 'A' to 'P'. 
+An example RGB image of each class from the first recording "Trip0" is displayed in the table below. 
+Only 12 classes are displayed here because the robot finished this trip without entering the rest four cells.  
 
 <table align="center">
   <tr>
@@ -112,7 +114,8 @@ A typical RGB frame and its synchronous event frame (rendered by software DV), t
     </td>
 </table>
 
-A motion capture system tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. Five recordings were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
+A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
+Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
 Four were under normal lighting, and one (trip2) in dim conditions. 
 
 Four additonal datasets were recorded in new places for the purpose of testing corss-scene generalization. 
