@@ -96,6 +96,8 @@ Only 12 classes are displayed here because the robot finished this trip without 
   </tr>
 </table>
 
+Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
+Four were under normal lighting, and one (Trip2) in dim conditions. 
 Four additonal datasets were recorded in new places for the purpose of testing corss-scene generalization. 
 
 <table align="center">
@@ -141,8 +143,7 @@ A typical RGB frame and its synchronous event frame (rendered by software DV), t
     </td>
 </table>
 
-Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
-Four were under normal lighting, and one (Trip2) in dim conditions. An overview and downloading path of each dataset is in the table below: 
+An overview and downloading path of each dataset is in the table below: 
 
 | Original recording            | illumination | motion-capture |event samples|RGB samples|
 |------------------|--------------|----------------|---------------------|-------|
