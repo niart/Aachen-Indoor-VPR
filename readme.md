@@ -165,8 +165,6 @@ For varying lighting experiments, Trip0 and Trip2 are mixed and split evenly for
 You can skip the rest of this step if you download preprocessed datasets. 
 Otherwise:
 
-First and foremost, 
-
 ```markdown
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
 cd Aachen-Indoor-VPR/preprocess
