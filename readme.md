@@ -99,7 +99,7 @@ Only 12 classes are displayed here because the robot finished this trip without 
 Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
 Four were under normal lighting, and one (Trip2) in dim conditions. 
 Four additonal datasets were recorded in new places for the purpose of testing corss-scene generalization. 
-An example RGB image of each new place from the additional datasets is displayed below: 
+An example RGB image of each new place along with the sychronous event frame (rendered by DV) from the additional datasets is displayed below: 
 
 <table align="center">
   <tr>
