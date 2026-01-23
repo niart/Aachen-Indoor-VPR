@@ -3,7 +3,7 @@ This project contributes a full set of open-source event/RGB dataset *__Aachen-i
 Based on this new dataset, we implement and improve a hybrid guided VAE on the new task of VPR while exploring into a smaller latent space, resulting in a compact, low-power low-latency and robust indoor localization approach. 
 Finally, we assess the capability of cross-scene generalization and analyse into the latent variable activity of this model.
 
-## 1. *Aachen-Indoor-VPR*: an event/RGB VPR dataset in office-like arena
+## 0. *Aachen-Indoor-VPR*: an event/RGB VPR dataset in office-like arena
 The dataset is recorded with Turtlebot4 maneuvering within an artificial office-like arena, which encompasses two FOVs and two levels of illumination, along with an additional dataset of robot maneuvers recorded in four new places. A glance at **[dataset recording](https://www.youtube.com/watch?v=3YV6RFQt1Os)** here. 
 Two ‘DAVIS 346’ event cameras were mounted at the front of the robot. The left camera has a 12mm focal length, and the right has 2.5mm. See images below for our robot platform and event cameras:
 <table align="center" width="100%">
@@ -161,18 +161,7 @@ An overview and downloading path of each dataset is in the table below:
 Our project used Trip0 (wide FOV) for training, and Trip1 (wide FOV) for testing. 
 For varying lighting experiments, Trip0 and Trip2 are mixed and split evenly for training and testing.
 
-## 2. Model Training
-### A quick look at key files:
-1) key settings: The parameters for training are in ```/fzj_vpr/train/train_params.yml```;
-The parameters for testing are in ```/fzj_vpr/utils/test_params.yml```
-
-2) Key algorithm:
-The architecture of hybrid VAE is in ```fzj_vpr/utils/hybrid_beta_vae.py```;
-The training algorithm is in ```fzj_vpr/utils/hybrid_vae_guided_base.py```.
-
-### Run the experiment: 
-
-#### 0. Preprocess dataset
+## 1. Preprocess dataset
 First and foremost, 
 ```python 
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
@@ -220,6 +209,17 @@ Each .npy file contains a dictionary {data, label}.
 This will be the actual dataset for training and testing.
 If you need samples from the RGB frames for comparison, run ```python save_png.py```. This script preprocess the RGB frames in the same pipeline. In this set of samples, in the name of each sample, the number after word "label" is the label, and the number after workd "timestamp" is the timestamp. To save time, you can download the preprocessed RGB samples (```rgb.zip```) from [HERE](https://drive.google.com/drive/folders/1N3tMr3MM-Fo_GN2T5B4C52VfnCZsQSbC?usp=sharing).
 
+
+## 2. Model Training
+### A quick look at key files:
+1) key settings: The parameters for training are in ```/fzj_vpr/train/train_params.yml```;
+The parameters for testing are in ```/fzj_vpr/utils/test_params.yml```
+
+2) Key algorithm:
+The architecture of hybrid VAE is in ```fzj_vpr/utils/hybrid_beta_vae.py```;
+The training algorithm is in ```fzj_vpr/utils/hybrid_vae_guided_base.py```.
+
+### Run the experiment: 
 
 #### 1. Setup environment: 
 Use Anaconda to create and activate a virtual environment ```fzj_vpr``` with 
