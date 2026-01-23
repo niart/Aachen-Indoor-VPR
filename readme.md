@@ -151,8 +151,8 @@ An overview and downloading path of each dataset is in the table below:
 | Trip0            |  normal       | [yes](https://drive.google.com/drive/folders/13DTD-JbhYeZvNPj2EGjYoPBmMxawaFRX?usp=sharing)            | [1609 (wide FOV)](https://drive.google.com/drive/folders/1ahJrSccRAaw5_b9a6JukkTtGcL_W8vZM?usp=sharing); [1608 (narrow FOV)](https://drive.google.com/drive/folders/1AY7ccdSfTU_SYOrMCnm3m3g1RIZpYZcJ?usp=sharing)| [982 (wide FOV)](https://drive.google.com/drive/folders/10r9cldtQ90J0mUnxnYpSKZDuRW2bL9km?usp=sharing)|
 | Trip1            |  normal       | [yes](https://drive.google.com/drive/folders/1azpnnJYewJBccYZcDUhYdCMhLj6TNFXw?usp=sharing)            | [1521 (wide FOV)](https://drive.google.com/drive/folders/1QtNJkDYJ7hjYtlpeAGLjRQt0FEytbNzS?usp=sharing); [1519 (narrow FOV)](https://drive.google.com/drive/folders/1h0lqVe3fvMuYCGibscuoe_OqOMXQx-io?usp=sharing) | test  |
 | Trip2            |  dim          | [yes](https://drive.google.com/drive/folders/1QdAw-bsu2wLnu6vKVug7kot5i436cHCk?usp=sharing)            | [1542 (wide FOV](https://drive.google.com/drive/folders/1nTZHuGDlwheCHlOsluTbNIczBEh13Xcp?usp=sharing)); [1538 (narrow FOV)](https://drive.google.com/drive/folders/1-ZbSuMk8r_E6v3hQXdGOhfVptDG8VNSG?usp=sharing)  | N.A.  |
-| Trip3            |  normal       | yes            | unpreprocessed     | N.A.  |
-| Trip4            |  normal       | yes            | unpreprocessed     | N.A.  |
+| Trip3            |  normal       | [yes](https://drive.google.com/drive/folders/18UOpB_KKVZdU_Zn36iahhYfHOamTw3Sv?usp=sharing)            | unpreprocessed     | N.A.  |
+| Trip4            |  normal       | [yes](https://drive.google.com/drive/folders/1qkoFz1nRWoJc3BVFa8RXlbKIz1Li8X5t?usp=sharing)            | unpreprocessed     | N.A.  |
 | office           |  slightly dim | no             | [61 (wide FOV)](https://drive.google.com/drive/folders/13kZj3drs-1sSpw4cS1S6XIYfANM6ZrdN?usp=sharing)                  | N.A.  |
 | [hall](https://drive.google.com/drive/folders/1zPb46yEeaDAr45U7X6fuWbYsF6c60BHG?usp=sharing)             |  slightly dim | no             | [81 (wide FOV)](https://drive.google.com/drive/folders/1qkHnRY-gYLmOxK315b3bcKqGHN4YjttO?usp=sharing) | [33 (wide FOV)](https://drive.google.com/drive/folders/12MBOxBvuT-rzqKKIC_5jFAhZSKrgOTIY?usp=sharing)  |
 | [passageway](https://drive.google.com/drive/folders/1e3P96lYFEWstRqDICTadmXncUB1CWOQJ?usp=sharing)       |  slightly dim | no             | [81 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing)                 | [91 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing) |
@@ -179,8 +179,8 @@ Firstly,
 python get_turtle.py
 ```
 This step is to take (X, Y) coordinates of the turtlebot from the motion capture records of multiple objects, resulting in tutle_x.csv. 
-Use ```interpolation.py``` to fill in empty entries if there're empty entries in tutle_trip_x.csv.
-We also need a file all_turtle.csv which contains all entries of turtlebot coordinates from different trips. You can do so by manually merging all tutle_trip_x.csv, or slightly modify ```get_turtle.py```.
+Use ```interpolation.py``` to fill in empty entries if there're empty entries in tutle_x.csv.
+We also created a file [all_turtle.csv](https://drive.google.com/drive/folders/1i76xviKfdnT4mRb2Jlz24lsbIpI2xON-?usp=sharing) which contains all entries of turtlebot coordinates from different trips. You can do so by manually merging all tutle_trip_x.csv, or slightly modify ```get_turtle.py```.
 
 Then, 
 ```python 
