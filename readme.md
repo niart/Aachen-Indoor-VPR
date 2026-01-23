@@ -18,7 +18,7 @@ Two ‘DAVIS 346’ event cameras were mounted at the front of the robot. The le
 </table>
 
 The environment is a 6m×4m artificial office-like space with four walls and various objects like tables, books,
-and bins (see below). 
+and bins in the laboratory of Juliech Research Center, Aachen Germany (see below). 
 <p align="center">
 <img src="https://github.com/niart/fzj_vpr/blob/2101c45eaba791144ba56666facd6f67f058342c/pic/20231024_175530.jpg" width=24% height=50%>
 <img src="https://github.com/niart/fzj_vpr/blob/9ac69682f54a8b9eb82b3acfaac5cda7f956921d/pic/20231024_175824.jpg" width=24% height=50%>
