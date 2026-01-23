@@ -94,29 +94,9 @@ Only 12 classes are displayed here because the robot finished this trip without 
   </tr>
 </table>
 
-Dataset was preprocessed before training. 
-The event stream is converted into 50 event frames per sample with a 2ms window per frame and downsampled into 128×128 resolution. 
-There are 1,500-1,700 event samples per recording. 
-A typical RGB frame and its synchronous event frame (rendered by software DV), the process of creating event-based sample, as well as the eventul preprocessed event sample are shown below: 
-<table align="center">
-  <tr>
-    <td align="center" valign="middle">
-      <img src="https://github.com/niart/fzj_vpr/blob/5ed26e619268007c5bfef6ac5853dcb6b6243634/pic/rgb_frame.png" height="160"><br>
-      <b>A typical RGB frame and its synchronous event frame</b>
-    </td>
-    <td align="center" valign="middle">
-      <img src="https://github.com/niart/fzj_vpr/blob/9cd5d94124e57e36faafb185ae3eeacb883ae410/pic/time_window.png" height="200"><br>
-      <b>Process of creating event-based sample</b>
-    </td>
-    <td align="center" valign="middle">
-      <img src="https://github.com/niart/fzj_vpr/blob/5ed26e619268007c5bfef6ac5853dcb6b6243634/pic/event.png" height="140"><br>
-      <b>Preprocessed event sample</b>
-    </td>
-</table>
-
 A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
 Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
-Four were under normal lighting, and one (trip2) in dim conditions. 
+Four were under normal lighting, and one (Trip2) in dim conditions. 
 
 Four additonal datasets were recorded in new places for the purpose of testing corss-scene generalization. 
 
@@ -141,6 +121,26 @@ Four additonal datasets were recorded in new places for the purpose of testing c
       <b>Printer Room</b>
     </td>
   </tr>
+</table>
+
+Dataset was preprocessed before training. 
+The event stream is converted into 50 event frames per sample with a 2ms window per frame and downsampled into 128×128 resolution. 
+There are 1,500-1,700 event samples per recording. 
+A typical RGB frame and its synchronous event frame (rendered by software DV), the process of creating event-based sample, as well as the eventul preprocessed event sample are shown below: 
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <img src="https://github.com/niart/fzj_vpr/blob/5ed26e619268007c5bfef6ac5853dcb6b6243634/pic/rgb_frame.png" height="160"><br>
+      <b>A typical RGB frame and its synchronous event frame</b>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://github.com/niart/fzj_vpr/blob/9cd5d94124e57e36faafb185ae3eeacb883ae410/pic/time_window.png" height="200"><br>
+      <b>Process of creating event-based sample</b>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://github.com/niart/fzj_vpr/blob/5ed26e619268007c5bfef6ac5853dcb6b6243634/pic/event.png" height="140"><br>
+      <b>Preprocessed event sample</b>
+    </td>
 </table>
 
 An overview and downloading path of each dataset is in the table below: 
