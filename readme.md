@@ -251,6 +251,10 @@ python train_hybrid_vae_guided_base.py
 The path for loading testing dataset in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/utils/train_hybrid_vae_guided_base.py#L1072)
 
 Have a look at Tensorboard by running: ```tensorbord --logdir= --port=```, where you will see the excitatory classifier accuracy and TSNE plots. 
+The testing results of T-SNE visualization of excitation portion of latent codes, encoded by gVAE16 (a), gVAE8 (b), and gVAE4 (c) are displayed below.
+<p align="center">
+<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/24fffebaa56c9778ad17c81a5efadfee4527b168/pic/tsne_new3.png" width=90% height=20%>
+</p>
 
 ### D) To train the model from beginning:
 ```python 
@@ -265,9 +269,6 @@ The path for loading training sampleset is [this line](https://github.com/niart/
 and the path for loading evaluation sampleset (along with training) is in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L43).
 To edit the number of excitatory latent varibles, please access ```train_params.yml``` and ```test_params.yml```.  
 
-<p align="center">
-<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/24fffebaa56c9778ad17c81a5efadfee4527b168/pic/tsne_new3.png" width=90% height=20%>
-</p>
 
 <!--
 #### 4. To train/test on 4-channel event frames, you need these modifications:
@@ -331,6 +332,11 @@ This evaluation is to investigate if this model is able to distinguish new place
 ### A) Three novel places among 13 familiar places
 Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. 
 In our project, we mix the samplesets of three new places (printing room, passageway and hall) into the testing sampleset, and used the three unvisited location classes to label three new places, so that we can take advantage of the testing algorithm. 
+
+Below is the T-SNE of hybrid guided VAE trained in varying illumination is tested wit three new places mixed in learnt places. 
+<p align="center">
+<img src="https://github.com/niart/Aachen-Indoor-VPR/blob/470323ad69f8fe7934027bdc7b536b2fa57b66f3/pic/3new_updated.png" width=50% height=20%>
+</p>
 
 <!--
 Remember to modify the path to the dataset through ```dataset_path_test =``` in ```evaluation_zero_shot.py```
