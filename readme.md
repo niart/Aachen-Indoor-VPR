@@ -178,15 +178,17 @@ Firstly,
 ```python 
 python get_turtle.py
 ```
-This step is to take (X, Y) coordinates of the turtlebot from the motion capture records of multiple objects, resulting in tutle_x.csv. 
+This step is to take (X, Y) coordinates of the turtlebot from the motion capture records out of multiple objects, resulting in tutle_x.csv. 
 Use ```interpolation.py``` to fill in empty entries if there're empty entries in tutle_x.csv.
-We also created a file [all_turtle.csv](https://drive.google.com/drive/folders/1i76xviKfdnT4mRb2Jlz24lsbIpI2xON-?usp=sharing) which contains all entries of turtlebot coordinates from different trips. You can do so by manually merging all tutle_trip_x.csv, or slightly modify ```get_turtle.py```.
+We also created a file [all_turtle.csv](https://drive.google.com/drive/folders/1i76xviKfdnT4mRb2Jlz24lsbIpI2xON-?usp=sharing) which contains all entries of turtlebot coordinates from different trips. 
+You can do so by manually merging all tutle_trip_x.csv, or slightly modify ```get_turtle.py```.
 
 Then, 
 ```python 
 python grid_heatmap_label.py
 ```
-This step will create a x_label.csv file which adds a columnb of "labels" 0-15 (or letters) to the tutle_trip_x.csv. It will also output a graph visualizing robot trajectory and the dividing of sections, as shown below:
+This step will create a x_label.csv file which adds a columnb of "labels" 0-15 (or capital letters) next to the tutle_x.csv. 
+It will also output a graph visualizing robot trajectory and the dividing of sections.
 
 At the same time, in the termnial, the representing color for each class will be printed out:
 <p align="center">
