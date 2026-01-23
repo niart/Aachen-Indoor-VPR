@@ -1,7 +1,7 @@
 # Hybrid Guided-VAE for Visual Place Recognition
 This project contributes a full set of open-source event/RGB dataset *__Aachen-indoor-VPR__*.
 Based on this new dataset, we implement and improve a hybrid guided VAE on the new task of VPR while exploring into a smaller latent space, resulting in a compact, low-power low-latency and robust indoor localization approach. 
-Finally, we assess the capability of cross-scene generalization and analyse into the latent variable activity of this model. See more in [our paper](https://arxiv.org/abs/2601.09248).
+Finally, we assess the capability of cross-scene generalization and analyse into the latent variable activity of this model. See more in [our paper](https://arxiv.org/abs/2601.09248). 
 
 ## 0. *Aachen-Indoor-VPR*: an event/RGB VPR dataset in office-like arena
 The dataset is recorded with Turtlebot4 maneuvering within an artificial office-like arena, which encompasses two FOVs and two levels of illumination, along with an additional dataset of robot maneuvers recorded in four new places. A glance at **[dataset recording](https://www.youtube.com/watch?v=3YV6RFQt1Os)** here. 
@@ -178,7 +178,7 @@ python get_turtle.py
 ```
 This step is to take (X, Y) coordinates of the turtlebot from the motion capture records out of multiple objects, resulting in tutle_x.csv. 
 Use ```interpolation.py``` to fill in empty entries if there're empty entries in tutle_x.csv.
-We also created a file [all_turtle.csv](https://drive.google.com/drive/folders/1i76xviKfdnT4mRb2Jlz24lsbIpI2xON-?usp=sharing) which contains all entries of turtlebot coordinates from different trips. 
+We also created a file [all_turtle.csv](https://drive.google.com/drive/folders/1i76xviKfdnT4mRb2Jlz24lsbIpI2xON-?usp=sharing) which contains all entries of turtlebot coordinates from different trips in order to define the boundary of this arena. 
 You can do so by manually merging all tutle_trip_x.csv, or slightly modify ```get_turtle.py```.
 
 Then, 
@@ -345,7 +345,7 @@ Remember to modify the path to the dataset through ```dataset_path_test =``` in 
 The interesting thing in this evaluation is the TSNE plot and testing accuracy of excitation classifier. Remember to use the result of the first epoch only, because the latter ones will contain the result of continued training.
 -->
 
-Comparison with NetVLAD: see [Here](https://github.com/niart/SNN_NetVlad)
+Compare generalization with NetVLAD: see [Here](https://github.com/niart/SNN_NetVlad)
 
 ## 4. Localization of robot through image retrieval
 1) ```cd fzj_vpr/utils```, and ```python localize.py```. This step will generate four dictionaries seq_reference{}.pkl and seq_query{}.pkl, where {} will be the number of samples in either reference dataset (used for training) or query dataset (used for inference).  Mannually delete two of the four which contain unmatched number (for example, if you have 1000 samples in training dataset, you will keep seq_reference1000.pkl and delete the other seq_reference{}.pkl).
