@@ -173,7 +173,6 @@ cd Aachen-Indoor-VPR/preprocess
 ```
 
 ```markdown
-```bash
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
 cd Aachen-Indoor-VPR/preprocess
 ```
