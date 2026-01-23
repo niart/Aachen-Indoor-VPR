@@ -162,12 +162,15 @@ Our project used Trip0 (wide FOV) for training, and Trip1 (wide FOV) for testing
 For varying lighting experiments, Trip0 and Trip2 are mixed and split evenly for training and testing.
 
 ## 1. Preprocess dataset
+You can skip the rest of this step if you download preprocessed datasets. 
+Otherwise:
+
 First and foremost, 
+
 ```python 
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
 cd Aachen-Indoor-VPR/preprocess
 ``` 
-You can skip the rest of this step if you download preprocessed datasets (titled `wide/narrow_tripx.zip`) from [HERE](https://drive.google.com/drive/folders/1Tz2tVOaChiXmHDxMNNozGww2RLLo5FZ2?usp=sharing). Otherwise, if you start from a xxx.aedat4 file:
 
 A) Mannually divide the arena into 4*4 sections:
 
