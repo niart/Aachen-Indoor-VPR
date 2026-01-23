@@ -147,11 +147,11 @@ An overview and downloading path of each dataset is in the table below:
 
 | Original recording            | illumination | motion-capture |event samples|RGB samples|
 |------------------|--------------|----------------|---------------------|-------|
-| trip0            |  normal       | yes            | [1609 (wide FOV)](https://drive.google.com/drive/folders/1ahJrSccRAaw5_b9a6JukkTtGcL_W8vZM?usp=sharing); [1608 (narrow FOV)](https://drive.google.com/drive/folders/1AY7ccdSfTU_SYOrMCnm3m3g1RIZpYZcJ?usp=sharing)| [982 (wide FOV)](https://drive.google.com/drive/folders/10r9cldtQ90J0mUnxnYpSKZDuRW2bL9km?usp=sharing)|
-| trip1            |  normal       | yes            | [1521 (wide FOV)](https://drive.google.com/drive/folders/1QtNJkDYJ7hjYtlpeAGLjRQt0FEytbNzS?usp=sharing); [1519 (narrow FOV)](https://drive.google.com/drive/folders/1h0lqVe3fvMuYCGibscuoe_OqOMXQx-io?usp=sharing) | test  |
-| trip2            |  dim          | yes            | [1542 (wide FOV](https://drive.google.com/drive/folders/1nTZHuGDlwheCHlOsluTbNIczBEh13Xcp?usp=sharing)); [1538 (narrow FOV)](https://drive.google.com/drive/folders/1-ZbSuMk8r_E6v3hQXdGOhfVptDG8VNSG?usp=sharing)  | N.A.  |
-| trip3            |  normal       | yes            | unpreprocessed     | N.A.  |
-| trip4            |  normal       | yes            | unpreprocessed     | N.A.  |
+| Trip0            |  normal       | yes            | [1609 (wide FOV)](https://drive.google.com/drive/folders/1ahJrSccRAaw5_b9a6JukkTtGcL_W8vZM?usp=sharing); [1608 (narrow FOV)](https://drive.google.com/drive/folders/1AY7ccdSfTU_SYOrMCnm3m3g1RIZpYZcJ?usp=sharing)| [982 (wide FOV)](https://drive.google.com/drive/folders/10r9cldtQ90J0mUnxnYpSKZDuRW2bL9km?usp=sharing)|
+| Trip1            |  normal       | yes            | [1521 (wide FOV)](https://drive.google.com/drive/folders/1QtNJkDYJ7hjYtlpeAGLjRQt0FEytbNzS?usp=sharing); [1519 (narrow FOV)](https://drive.google.com/drive/folders/1h0lqVe3fvMuYCGibscuoe_OqOMXQx-io?usp=sharing) | test  |
+| Trip2            |  dim          | yes            | [1542 (wide FOV](https://drive.google.com/drive/folders/1nTZHuGDlwheCHlOsluTbNIczBEh13Xcp?usp=sharing)); [1538 (narrow FOV)](https://drive.google.com/drive/folders/1-ZbSuMk8r_E6v3hQXdGOhfVptDG8VNSG?usp=sharing)  | N.A.  |
+| Trip3            |  normal       | yes            | unpreprocessed     | N.A.  |
+| Trip4            |  normal       | yes            | unpreprocessed     | N.A.  |
 | office           |  slightly dim | no             | [61 (wide FOV)](https://drive.google.com/drive/folders/13kZj3drs-1sSpw4cS1S6XIYfANM6ZrdN?usp=sharing)                  | N.A.  |
 | [hall](https://drive.google.com/drive/folders/1zPb46yEeaDAr45U7X6fuWbYsF6c60BHG?usp=sharing)             |  slightly dim | no             | [81 (wide FOV)](https://drive.google.com/drive/folders/1qkHnRY-gYLmOxK315b3bcKqGHN4YjttO?usp=sharing) | [33 (wide FOV)](https://drive.google.com/drive/folders/12MBOxBvuT-rzqKKIC_5jFAhZSKrgOTIY?usp=sharing)  |
 | [passageway](https://drive.google.com/drive/folders/1e3P96lYFEWstRqDICTadmXncUB1CWOQJ?usp=sharing)       |  slightly dim | no             | [81 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing)                 | [91 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing) |
