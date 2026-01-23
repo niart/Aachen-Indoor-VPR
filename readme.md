@@ -17,6 +17,10 @@ Two ‘DAVIS 346’ event cameras were mounted at the front of the robot. The le
   </tr>
 </table>
 
+A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
+Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
+Four were under normal lighting, and one (Trip2) in dim conditions. 
+
 The environment is a 6m×4m artificial office-like space with four walls and various objects like tables, books,
 and bins in the laboratory of Juliech Research Center, Aachen Germany (see below). 
 <p align="center">
@@ -32,9 +36,6 @@ The entire arena is evenly divided into 4 × 4 = 16 labeled square cells as show
 <img src="https://github.com/niart/fzj_vpr/blob/f06111dd2031cc5a6c824cadd6378180d8bc0888/pic/arena_horizental.png" width=60% height=50%>
 </p>
 
-A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
-Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
-Four were under normal lighting, and one (Trip2) in dim conditions. 
 
 Image samples recorded in each cell are classified into a unique class denoted by a letter 'A' to 'P'. 
 An example RGB image of each class from the first recording "Trip0" is displayed in the table below. 
