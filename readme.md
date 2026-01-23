@@ -246,7 +246,7 @@ conda activate fzj_vpr
 ### C) To test our trained model:
 Firstly, download the trained model ```epoch00390.tar``` from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing) and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
 Then, 
-```python 
+```markdown
 cd Aachen-Indoor-VPR/utils
 python train_hybrid_vae_guided_base.py
 ```
