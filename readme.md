@@ -265,7 +265,8 @@ This step will result in a series of trained models (every 10 epochs) `number_of
 
 ```Aachen-Indoor-VPR/train/logs/train_hybrid_vae_guided_base/default/```.
 
-The path for loading training sampleset is [this line]([Aachen-Indoor-VPR](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L42)); and the path for loading evaluation sampleset (along with training) is in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L43).
+The path for loading training sampleset is [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L42)); 
+and the path for loading evaluation sampleset (along with training) is in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L43).
 
 #### 4. To train/test on 4-channel event frames, you need these modifications:
 1) In ```/fzj_vpr/utils/hybrid_beta_vae.py```, change 
