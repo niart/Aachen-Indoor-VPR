@@ -28,17 +28,13 @@ and bins in the laboratory of Juliech Research Center, Aachen Germany (see below
 </p>
 
 A **[motion capture system](https://www.vicon.com/)** tracks the robot’s location in each trip, providing labels for supervised learning and evaluation. 
-Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
-Four were under normal lighting, and one (Trip2) in dim conditions. 
-
-The entire arena is evenly divided into 4 × 4 = 16 labeled square cells as shown below:
+The entire arena is evenly divided into 4 × 4 = 16 labeled square cells. 
+Image samples recorded in each cell are classified into a unique class denoted by a letter 'A' to 'P', as shown below:
 
 <p align="center">
 <img src="https://github.com/niart/fzj_vpr/blob/f06111dd2031cc5a6c824cadd6378180d8bc0888/pic/arena_horizental.png" width=60% height=50%>
 </p>
 
-
-Image samples recorded in each cell are classified into a unique class denoted by a letter 'A' to 'P'. 
 An example RGB image of each class from the first recording "Trip0" is displayed in the table below. 
 Only 12 classes are displayed here because the robot finished this trip without entering the rest four cells.  
 
@@ -145,7 +141,8 @@ A typical RGB frame and its synchronous event frame (rendered by software DV), t
     </td>
 </table>
 
-An overview and downloading path of each dataset is in the table below: 
+Five recordings (Trip0 ~ Trip4) were made by manually driving the robot along predefined routes, each consisting of three rounds in the office. 
+Four were under normal lighting, and one (Trip2) in dim conditions. An overview and downloading path of each dataset is in the table below: 
 
 | Original recording            | illumination | motion-capture |event samples|RGB samples|
 |------------------|--------------|----------------|---------------------|-------|
