@@ -252,7 +252,7 @@ The path for loading testing dataset in [this line](https://github.com/niart/Aac
 
 Have a look at Tensorboard by running: ```tensorbord --logdir= --port=```, where you will see the excitatory classifier accuracy and TSNE plots. 
 
-### D) To train the model yourself:
+### D) To train the model from beginning:
 ```python 
 cd train
 python train.py
@@ -324,9 +324,9 @@ groups = 4
 This evaluation is to investigate if this model is able to distinguish new place(s) from familiar places without any continued pre-training. 
 
 ### A) Three novel places among 13 familiar places
-Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. We used the three unvisited location classes to label 
-Then add the new dataset into the training dataset. Alternatively, download the preprocessed sample (testing dataset plus one of four new places) from [HERE](https://drive.google.com/drive/folders/15F9Gf88z_g6yJmNX8b13HkPkOqwbVwlE?usp=sharing). 
-Also download the trained model ```epoch00390.tar``` and put it in ```fzj_vpr/train/logs/train_hybrid_vae_guided_base/default/Oct29_13-10-57_pgi15-gpu5.iff.kfa-juelich.de/checkpoints/```.
+Firstly, go through a similar pipeline as described in `preprocess dataset` to get four small new additonal dataset representing four new places. 
+In our project, we mix the samplesets of three new places (printing room, passageway and hall) into the testing sampleset, and used the three unvisited location classes to label three new places, so that we can take advantage of the testing algorithm. 
+
 Then, 
 ```python 
 cd fzj_vpr/utils
