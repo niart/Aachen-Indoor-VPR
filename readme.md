@@ -92,9 +92,9 @@ Image samples recorded in each cell are classified into a unique class denoted b
   </tr>
 </table>
 
-
-Dataset was preprocessed before training. The event stream is converted into 50 event frames per sample with a 2ms window and 128×128 resolution. 
-There are 1,500-1,700 event samples per recording. First recording is used for training, and second recording for testing. For varying lighting, first and third recordings are mixed and split evenly for training and testing.
+Dataset was preprocessed before training. 
+The event stream is converted into 50 event frames per sample with a 2ms window per frame and downsampled into 128×128 resolution. 
+There are 1,500-1,700 event samples per recording. 
 A typical RGB frame and its synchronous event frame (rendered by software DV), the process of creating event-based sample, as well as the eventul preprocessed event sample are shown below: 
 <table align="center">
   <tr>
@@ -154,6 +154,8 @@ An overview and downloading path of each dataset is in the table below:
 | [passageway](https://drive.google.com/drive/folders/1e3P96lYFEWstRqDICTadmXncUB1CWOQJ?usp=sharing)       |  slightly dim | no             | [81 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing)                 | [91 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing) |
 | [printer room](https://drive.google.com/drive/folders/1F0UBaiKh9kxd-z8anEpvE3KJrJuoX62D?usp=sharing)     |  slightly dim | no             | [61 (wide FOV)](https://drive.google.com/drive/folders/1OSqQ-W4Lr3jOr5Cj8sWt3QjZIoCwcy_7?usp=sharing)                  | [37 (wide FOV)](https://drive.google.com/drive/folders/1oXsaL-ugkE9VolfXIkW6YfBIUHAbE2Kx?usp=sharing)  |
 
+Our project used the first recording for training, and second recording for testing. 
+For varying lighting, first and third recordings are mixed and split evenly for training and testing.
 
 ## 2. Model Training
 ### A quick look at key files:
