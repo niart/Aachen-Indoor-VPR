@@ -167,11 +167,6 @@ Otherwise:
 
 First and foremost, 
 
-```python 
-git clone https://github.com/niart/Aachen-Indoor-VPR.git
-cd Aachen-Indoor-VPR/preprocess
-```
-
 ```markdown
 git clone https://github.com/niart/Aachen-Indoor-VPR.git
 cd Aachen-Indoor-VPR/preprocess
