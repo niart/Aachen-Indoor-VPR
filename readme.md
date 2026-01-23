@@ -158,8 +158,8 @@ An overview and downloading path of each dataset is in the table below:
 | [passageway](https://drive.google.com/drive/folders/1e3P96lYFEWstRqDICTadmXncUB1CWOQJ?usp=sharing)       |  slightly dim | no             | [81 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing)                 | [91 (wide FOV)](https://drive.google.com/drive/folders/1CFPD7Ad3NJ9CFWGxl1zynKTOuMAudgrD?usp=sharing) |
 | [printer room](https://drive.google.com/drive/folders/1F0UBaiKh9kxd-z8anEpvE3KJrJuoX62D?usp=sharing)     |  slightly dim | no             | [61 (wide FOV)](https://drive.google.com/drive/folders/1OSqQ-W4Lr3jOr5Cj8sWt3QjZIoCwcy_7?usp=sharing)                  | [37 (wide FOV)](https://drive.google.com/drive/folders/1oXsaL-ugkE9VolfXIkW6YfBIUHAbE2Kx?usp=sharing)  |
 
-Our project used the first recording for training, and second recording for testing. 
-For varying lighting, first and third recordings are mixed and split evenly for training and testing.
+Our project used Trip0 (wide FOV) for training, and Trip1 (wide FOV) for testing. 
+For varying lighting, Trip0 and Trip2 are mixed and split evenly for training and testing.
 
 ## 2. Model Training
 ### A quick look at key files:
