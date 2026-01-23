@@ -263,6 +263,7 @@ This step will result in a series of trained models (every 10 epochs) `number_of
 
 The path for loading training sampleset is [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L42); 
 and the path for loading evaluation sampleset (along with training) is in [this line](https://github.com/niart/Aachen-Indoor-VPR/blob/7a6b703b3f3c8abd8e8dbf88ec7d55ca921bbacf/train/train.py#L43).
+To edit the number of excitatory latent varibles, please access ```train_params.yml``` and ```test_params.yml```.  
 
 <!--
 #### 4. To train/test on 4-channel event frames, you need these modifications:
