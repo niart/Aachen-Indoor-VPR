@@ -146,7 +146,7 @@ A typical RGB frame and its synchronous event frame (rendered by software DV), t
 
 An overview and downloading path of each dataset is in the table below: 
 
-| Original recording            | illumination | motion-capture |event samples|RGB samples|
+| Original recording            | illumination | motion-capture? |event samples|RGB samples|
 |------------------|--------------|----------------|---------------------|-------|
 | Trip0            |  normal       | [yes](https://drive.google.com/drive/folders/13DTD-JbhYeZvNPj2EGjYoPBmMxawaFRX?usp=sharing)            | [1609 (wide FOV)](https://drive.google.com/drive/folders/1ahJrSccRAaw5_b9a6JukkTtGcL_W8vZM?usp=sharing); [1608 (narrow FOV)](https://drive.google.com/drive/folders/1AY7ccdSfTU_SYOrMCnm3m3g1RIZpYZcJ?usp=sharing)| [982 (wide FOV)](https://drive.google.com/drive/folders/10r9cldtQ90J0mUnxnYpSKZDuRW2bL9km?usp=sharing)|
 | Trip1            |  normal       | [yes](https://drive.google.com/drive/folders/1azpnnJYewJBccYZcDUhYdCMhLj6TNFXw?usp=sharing)            | [1521 (wide FOV)](https://drive.google.com/drive/folders/1QtNJkDYJ7hjYtlpeAGLjRQt0FEytbNzS?usp=sharing); [1519 (narrow FOV)](https://drive.google.com/drive/folders/1h0lqVe3fvMuYCGibscuoe_OqOMXQx-io?usp=sharing) | test  |
